@@ -3,11 +3,17 @@ package com.qa.student.domain;
 import java.util.Objects;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Students {
 
+	@Id // mark it as the primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
 	private Long Id;
+
 	private String name;
 	private int age;
 	private String phoneNumber;

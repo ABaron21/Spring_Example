@@ -1,5 +1,7 @@
 package com.qa.student.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.qa.student.domain.Students;
@@ -20,4 +22,8 @@ public class StudentsService {
 		return this.repo.save(info);
 	}
 
+	// ReadAll
+	public List<Students> readAll() {
+		return this.repo.findAll();
+	}
 }

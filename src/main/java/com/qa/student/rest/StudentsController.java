@@ -1,5 +1,8 @@
 package com.qa.student.rest;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,4 +25,11 @@ public class StudentsController {
 	public Students createMap(@RequestBody Students info) {
 		return this.service.createNew(info);
 	}
+
+	// ReadAll - get request
+	@GetMapping("/readAll")
+	public List<Students> readMap() {
+		return this.service.readAll();
+	}
+
 }
