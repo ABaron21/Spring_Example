@@ -37,6 +37,11 @@ public class StudentsService {
 		return null;
 	}
 
+	// Read By Age
+	public List<Students> readByAge(int age) {
+		return this.repo.findByAge(age);
+	}
+
 	// Update
 	public Students updateInfo(Long id, Students newInfo) {
 		Students oldInfo = this.repo.getById(id);

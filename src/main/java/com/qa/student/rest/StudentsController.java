@@ -36,9 +36,15 @@ public class StudentsController {
 	}
 
 	// Read By Id
-	@GetMapping("/read/{id}")
+	@GetMapping("/readId/{id}")
 	public Students readById(@PathVariable Long id) {
 		return this.service.readId(id);
+	}
+
+	// Read By Age
+	@GetMapping("/readAge/{age}")
+	public List<Students> readByAge(@PathVariable int age) {
+		return this.service.readByAge(age);
 	}
 
 	// Update - put request
